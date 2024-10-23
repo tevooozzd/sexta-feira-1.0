@@ -2,7 +2,9 @@
  
 ### Este repositório contém a primeira versão do projeto de IA (Inteligência Artificial) 1,0 da SEXTA-FEIRA. Welcome to the project e aproveite!
 
-  ###### - App DESKTOP ( Biblioteca 'KIVY' (python) ) 
+
+
+  ##### - App DESKTOP ( Biblioteca 'KIVY' (python) ) 
     - Sistema de voz (apenas)
     - Histórico sobre antigos usos
     - Sistema de 'login'
