@@ -4,7 +4,7 @@
 
 
 
-  ##### - App DESKTOP ( Biblioteca 'TKINTER' (python) ) 
+  ##### - App DESKTOP ( Biblioteca 'FLET' (python) ) 
     - Sistema de voz (apenas)
     - Histórico sobre antigos usos
     - Sistema de 'login'
