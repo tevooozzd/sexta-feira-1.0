@@ -4,7 +4,7 @@
 
 
 
-  ##### - App DESKTOP ( Biblioteca 'KIVY' (python) ) 
+  ##### - App DESKTOP ( Biblioteca 'TKINTER' (python) ) 
     - Sistema de voz (apenas)
     - Histórico sobre antigos usos
     - Sistema de 'login'
