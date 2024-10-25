@@ -1,26 +1,69 @@
 import flet as ft
-from login import login
-from criar_conta import criar_conta
-from esqueci_senha import esqueci_senha
-from sexta_feira import sexta_feira
 
 def main(page: ft.Page):
-    page.title = "SEXTA-FEIRA 1.0"
+    page.title = "SEXTA FEIRA (1.0) - LOGIN"
     page.vertical_alignment = ft.MainAxisAlignment.START
+    page.bgcolor=ft.colors.BLACK
 
-    def pagina_login_main(e=None):
-        login(page, pagina_criar_conta, pagina_esqueci_senha, pagina_sexta_feira)
+    # Criando a área lateral esquerda
+    lado_esquerdo = ft.Container(
+        content=ft.Text('Lado Esquerdo', color=ft.colors.WHITE),
+        bgcolor=ft.colors.GREY_900,
+        width=350,
+        height=650,  
+        padding=20
+    )
 
-    def pagina_criar_conta(e=None):
-        criar_conta(page, pagina_login_main)
+    # Criando o contêiner no meio 
+    lado_cima = ft.Container(
+        content=ft.Text('Parte Superior', color=ft.colors.WHITE),
+        bgcolor=ft.colors.GREY_900,
+        width=250,
+        height=177,  # Ajustado para 10% a menos
+        padding=20,
+        margin=10
+    )
 
-    def pagina_esqueci_senha(e=None):
-        esqueci_senha(page, pagina_login_main)
+    # Criando o contêiner no meio (centro) 
+    lado_meio = ft.Container(
+        content=ft.Text('Centro', color=ft.colors.WHITE),
+        bgcolor=ft.colors.GREY_900,
+        width=250,
+        height=217,  # Ajustado para 10% a mais
+        padding=20,
+        margin=10
+    )
+
+    # Criando o contêiner na parte inferior 
+    lado_baixo = ft.Container(
+        content=ft.Text('Parte Inferior', color=ft.colors.WHITE),
+        bgcolor=ft.colors.GREY_900,
+        width=250,
+        height=177,  
+        padding=20,
+        margin=10
+    )
+
+    # Criando a área lateral direita
+    lado_direito = ft.Container(
+        content=ft.Text('Lado Direito', color=ft.colors.WHITE),
+        bgcolor=ft.colors.WHITE70,
+        width=350,
+        height=650,  
+        padding=20
+    )
+
     
-    def pagina_sexta_feira(e=None):
-        sexta_feira(page)
+    # Estrutura principal:o
+    page.add(ft.Row([
+        lado_esquerdo,
+        ft.Column([
+            lado_cima,
+            lado_meio,
+            lado_baixo
+        ]),
+        lado_direito
+    ]))
 
-    pagina_login_main(None)
-
+# - Abrindo o app segundo a função main
 ft.app(target=main)
-
